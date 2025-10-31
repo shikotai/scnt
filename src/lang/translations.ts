@@ -218,13 +218,15 @@ export const translations = {
         },
         publications: {
           title: "Публикации",
-          paragraph: "Ниже представлены научные публикации и отчёты, связанные с данным проектом.",
+          paragraph:
+            "Ниже представлены научные публикации и отчёты, связанные с данным проектом.",
           list: {
             paper1: "Статья в журнале «Processes» (2024)",
             paper2: "Акт приёмки — Processes №3788544",
-            paper3: "Статья в журнале «КӨКНВО» №1 (2025)"
+            paper3: "Статья в журнале «Academic Journal of Physical and Chemical Sciences» (2025)"
           }
         }
+
       },
       backButton: "← Назад к проектам",
     },
@@ -454,9 +456,10 @@ export const translations = {
         list: {
           paper1: "Article in the journal “Processes” (2024)",
           paper2: "Acceptance Certificate — Processes No. 3788544",
-          paper3: "Article in the journal “KOKNVO” No. 1 (2025)"
+          paper3: "Article in the “Academic Journal of Physical and Chemical Sciences” (2025)"
         }
-      } 
+      }
+
     },
       backButton: "← Back to Projects",
     },
@@ -687,9 +690,10 @@ export const translations = {
         list: {
           paper1: "«Processes» журналындағы мақала (2024)",
           paper2: "Қабылдау актісі — Processes №3788544",
-          paper3: "«КӨКНВО» журналы №1 мақаласы (2025)"
+          paper3: "«Academic Journal of Physical and Chemical Sciences» журналындағы мақала (2025)"
         }
       }
+
     },
     backButton: "← Жобаларға оралу",
   },
