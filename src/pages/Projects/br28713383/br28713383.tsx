@@ -78,7 +78,7 @@ const Br28713383: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="/files/project1/КОКНВО №1 Academic journal #3.pdf"
+                  href="/files/project1/academic-journal-physical-chemical-sciences-2025"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
