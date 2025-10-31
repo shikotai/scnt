@@ -27,7 +27,7 @@ export const translations = {
         addressLabel: "Адрес:",
         addressValue: "Казахстан, г. Алматы, пр. Абая, 191",
         phoneLabel: "Номер:",
-        phoneValue: "+7 (XXX) XXX-XX-XX",
+        phoneValue: "+7 (705) 522-10-54",
         emailLabel: "Email:",
         emailValue: "info@example.kz",
       },

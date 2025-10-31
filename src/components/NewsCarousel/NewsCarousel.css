@@ -80,12 +80,13 @@ body {
    =============================== */
 .news-image {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 380px;
   object-fit: cover;
   display: block;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
+
 
 /* ===============================
    CONTENT

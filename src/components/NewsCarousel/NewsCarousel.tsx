@@ -16,7 +16,7 @@ const NewsCarousel: React.FC = () => {
           <Link to="/news/japan-news" className="news-link">
             <div className="news-card">
               <img
-                src="/images/news/japan-collab.jpg"
+                src="/images/news/japan-collab.png"
                 alt={t("newsCarousel.items.japanCollab.title")}
                 className="news-image"
               />
