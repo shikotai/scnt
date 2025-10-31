@@ -27,7 +27,7 @@ export const translations = {
         addressLabel: "Адрес:",
         addressValue: "Казахстан, г. Алматы, пр. Абая, 191",
         phoneLabel: "Номер:",
-        phoneValue: "+7 (705) 522-10-54",
+        phoneValue: "+7 (705) 522-10-",
         emailLabel: "Email:",
         emailValue: "info@example.kz",
       },
@@ -218,9 +218,13 @@ export const translations = {
         },
         publications: {
           title: "Публикации",
-          paragraph:
-            "В дальнейшем здесь будут размещены научные публикации, патенты, результаты экспериментов и ссылки на материалы проекта.",
-        },
+          paragraph: "Ниже представлены научные публикации и отчёты, связанные с данным проектом.",
+          list: {
+            paper1: "Статья в журнале «Processes» (2024)",
+            paper2: "Акт приёмки — Processes №3788544",
+            paper3: "Статья в журнале «КӨКНВО» №1 (2025)"
+          }
+        }
       },
       backButton: "← Назад к проектам",
     },
@@ -446,8 +450,13 @@ export const translations = {
       publications: {
         title: "Publications",
         paragraph:
-          "In the future, this section will include scientific publications, patents, experimental results, and links to project materials.",
-      },
+          "Below are the scientific publications and reports related to this project.",
+        list: {
+          paper1: "Article in the journal “Processes” (2024)",
+          paper2: "Acceptance Certificate — Processes No. 3788544",
+          paper3: "Article in the journal “KOKNVO” No. 1 (2025)"
+        }
+      } 
     },
       backButton: "← Back to Projects",
     },
@@ -674,8 +683,13 @@ export const translations = {
       publications: {
         title: "Жарияланымдар",
         paragraph:
-          "Келешекте бұл бөлімде ғылыми мақалалар, патенттер, эксперименттік нәтижелер және жоба материалдарына сілтемелер орналастырылады.",
-      },
+          "Бұл бөлімде жобаға қатысты ғылыми мақалалар мен есептер берілген.",
+        list: {
+          paper1: "«Processes» журналындағы мақала (2024)",
+          paper2: "Қабылдау актісі — Processes №3788544",
+          paper3: "«КӨКНВО» журналы №1 мақаласы (2025)"
+        }
+      }
     },
     backButton: "← Жобаларға оралу",
   },

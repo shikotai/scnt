@@ -70,6 +70,29 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.publication-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.publication-list li {
+  margin-bottom: 10px;
+}
+
+.publication-list a {
+  color: #1e5acb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.publication-list a:hover {
+  color: #0b1533;
+  text-decoration: underline;
+}
+
+
 /* ===============================
    BACK BUTTON
    =============================== */

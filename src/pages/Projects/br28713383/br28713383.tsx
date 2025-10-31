@@ -56,6 +56,36 @@ const Br28713383: React.FC = () => {
         <div className="about-inner">
           <div className="project-content">
             <p>{t("project_br28713383.sections.publications.paragraph")}</p>
+
+            <ul className="publication-list">
+              <li>
+                <a
+                  href="/files/project1/processes-13-02722-v2.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("project_br28713383.sections.publications.list.paper1")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/files/project1/Acceptance-Certificate-processes-3788544.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("project_br28713383.sections.publications.list.paper2")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/files/project1/КОКНВО №1 Academic journal #3.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("project_br28713383.sections.publications.list.paper3")}
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
