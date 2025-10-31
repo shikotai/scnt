@@ -1,0 +1,220 @@
+/* ===============================
+   GLOBAL RESET
+   =============================== */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   SECTION LAYOUT
+   =============================== */
+.news-section {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.news-title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: #0b1533;
+  margin-bottom: 40px;
+}
+
+/* ===============================
+   BOOTSTRAP CAROUSEL FIXES
+   =============================== */
+.news-carousel {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.news-carousel .carousel-inner,
+.news-carousel .carousel-item {
+  width: 100%;
+  display: block !important; /* override bootstrap flex */
+  justify-content: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
+}
+
+/* ===============================
+   CARD
+   =============================== */
+.news-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   IMAGE
+   =============================== */
+.news-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* ===============================
+   CONTENT
+   =============================== */
+.news-content {
+  text-align: left;
+  padding: 20px;
+  width: 100%;
+}
+
+.news-heading {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #1e5acb;
+  margin-bottom: 10px;
+}
+
+.news-date {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.news-description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ===============================
+   LINK
+   =============================== */
+.news-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.news-link:hover {
+  transform: scale(1.02);
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+/* --- Tablet --- */
+@media (max-width: 900px) {
+  .news-card {
+    max-width: 90%;
+  }
+
+  .news-heading {
+    font-size: 18px;
+  }
+
+  .news-description {
+    font-size: 15px;
+  }
+
+  .news-image {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* --- Mobile --- */
+@media (max-width: 600px) {
+  .news-section {
+    padding: 50px 10px;
+  }
+
+  .news-card {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 0 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .news-carousel .carousel-inner,
+  .news-carousel .carousel-item {
+    display: block !important;
+    width: 100%;
+  }
+
+  .news-image {
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .news-content {
+    padding: 14px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .news-heading {
+    font-size: 17px;
+  }
+
+  .news-date {
+    font-size: 13px;
+  }
+
+  .news-description {
+    font-size: 14px;
+  }
+
+  .news-title {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+}
+
+/* --- Debug (optional) --- */
+/*
+@media (max-width: 600px) {
+  body {
+    outline: 2px solid #ff6600;
+  }
+}
+*/

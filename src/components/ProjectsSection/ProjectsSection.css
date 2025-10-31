@@ -1,0 +1,87 @@
+.projects-section {
+  background-color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.projects-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 30px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+
+.project-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.project-content {
+  flex: 1;
+  text-align: left;
+}
+
+.project-description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.project-button {
+  display: inline-block;   /* ✅ нужно для <Link> */
+  background-color: #1e5acb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  padding: 10px 24px;
+  cursor: pointer;
+  text-decoration: none;   /* ✅ убираем подчёркивание */
+  transition: background 0.2s ease;
+}
+
+
+.project-button:hover {
+  background-color: #154fa3;
+}
+
+@media (max-width: 900px) {
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-content {
+    text-align: center;
+  }
+}

@@ -1,0 +1,167 @@
+.news-section {
+  background-color: #f8f9ff;
+  padding: 80px 20px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+.news-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #0b1533;
+  margin-bottom: 50px;
+}
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ===============================
+   CARD STYLE
+   =============================== */
+.news-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 100%;                /* ✅ responsive width */
+  max-width: 1100px;          /* centers nicely on large screens */
+  margin: 0 auto;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+}
+
+.news-image img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.news-text {
+  flex: 1;
+  padding: 30px;
+  text-align: left;
+}
+
+.news-text h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0b1533;
+  margin-bottom: 10px;
+}
+
+.news-date {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.news-text p {
+  color: #333;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.news-button {
+  display: inline-block;
+  background-color: #1e5acb;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-decoration: none;
+}
+
+.news-button:hover {
+  background-color: #154fa3;
+}
+
+/* ===============================
+   TABLET VIEW
+   =============================== */
+@media (max-width: 992px) {
+  .news-container {
+    gap: 40px;
+  }
+
+  .news-image img {
+    width: 400px;
+    height: 250px;
+  }
+
+  .news-text {
+    padding: 20px;
+  }
+}
+
+/* ===============================
+   MOBILE VIEW
+   =============================== */
+@media (max-width: 768px) {
+  .news-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .news-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .news-text {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .news-date {
+    text-align: center;
+  }
+
+  .news-button {
+    margin-top: 10px;
+  }
+}
+
+/* ===============================
+   SMALL MOBILE VIEW
+   =============================== */
+@media (max-width: 480px) {
+  .news-section {
+    padding: 50px 10px;
+  }
+
+  .news-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .news-text h3 {
+    font-size: 18px;
+  }
+
+  .news-text p {
+    font-size: 14px;
+  }
+
+  .news-button {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+}

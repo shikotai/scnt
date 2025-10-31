@@ -1,0 +1,135 @@
+  .projects-container {
+    background-color: #f4f7fc;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .project-section {
+    margin: 50px auto;
+    max-width: 900px;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-title-link {
+    text-decoration: none;
+    color: black;
+  }
+
+  .project-title-link h2 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+  }
+
+  .project-title-link:hover h2 {
+    color: #1976d2;
+  }
+
+  .project-detail {
+    background-color: #f4f7fc;
+    padding: 50px 20px;
+    min-height: 100vh;
+  }
+
+  .project-header h2 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  .project-goal,
+  .project-description,
+  .project-publications {
+    background: #ffffff;
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .project-goal h3,
+  .project-publications h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .project-btn {
+    display: block;
+    margin: 20px auto 0;
+    background-color: #1976d2;
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .project-btn:hover {
+    background-color: #125ea7;
+  }
+
+  /* ===============================
+   📱 RESPONSIVE ONLY (PC unchanged)
+   =============================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .project-section {
+    padding: 30px;
+    margin: 40px 15px;
+  }
+
+  .project-title-link h2 {
+    font-size: 1.2rem;
+  }
+
+  .project-image {
+    max-width: 700px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .project-section {
+    padding: 25px;
+    margin: 30px 10px;
+  }
+
+  .project-title-link h2 {
+    font-size: 1.1rem;
+  }
+
+  .project-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .projects-container {
+    padding: 30px 10px;
+  }
+
+  .project-section {
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .project-title-link h2 {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .project-btn {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
