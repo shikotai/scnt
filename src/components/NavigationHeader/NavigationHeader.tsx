@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavigationHeader.css";
 import logo from "../../assets/logo.png";
-import Flag from "react-flagkit";
 import { useLang } from "../../lang/LanguageContext";
 
 const NavigationHeader: React.FC = () => {
