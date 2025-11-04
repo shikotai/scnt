@@ -3,6 +3,9 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { LanguageProvider } from "./lang/LanguageContext";
 import "./index.css";
+import 'flag-icons/css/flag-icons.min.css';
+
+
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

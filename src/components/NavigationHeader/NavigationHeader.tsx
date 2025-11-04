@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavigationHeader.css";
 import logo from "../../assets/logo.png";
+import Flag from "react-flagkit";
 import { useLang } from "../../lang/LanguageContext";
 
 const NavigationHeader: React.FC = () => {
@@ -54,20 +55,25 @@ const NavigationHeader: React.FC = () => {
             <button
               onClick={() => setLang("ru")}
               className={lang === "ru" ? "lang-btn active" : "lang-btn"}
+              title="Русский"
             >
-              🇷🇺
+              <span className="fi fi-ru"></span>
             </button>
+
             <button
               onClick={() => setLang("en")}
               className={lang === "en" ? "lang-btn active" : "lang-btn"}
+              title="English"
             >
-              🇬🇧
+              <span className="fi fi-us"></span>
             </button>
+
             <button
               onClick={() => setLang("kk")}
               className={lang === "kk" ? "lang-btn active" : "lang-btn"}
+              title="Қазақ тілі"
             >
-              🇰🇿
+              <span className="fi fi-kz"></span>
             </button>
           </div>
         </nav>

@@ -12,7 +12,7 @@ const News: React.FC = () => {
     {
       title: t("newsPage.items.japanCollab.title"),
       description: t("newsPage.items.japanCollab.description"),
-      image: "/images/news/japan-collab.jpg",
+      image: "/images/news/japan-collab.png",
       date: t("newsPage.items.japanCollab.date"),
       link: "/news/japan-news",
       button: t("newsPage.items.japanCollab.button"),

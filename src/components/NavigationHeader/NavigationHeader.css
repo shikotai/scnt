@@ -112,21 +112,28 @@
   border: 1px solid #1e5acb;
   border-radius: 6px;
   padding: 4px 8px;
-  font-size: 20px;
   cursor: pointer;
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lang-btn:hover {
   background-color: #1e5acb;
-  color: white;
   transform: scale(1.05);
 }
 
 .lang-btn.active {
   background-color: #1e5acb;
-  color: white;
   box-shadow: 0 0 6px rgba(30, 90, 203, 0.4);
+}
+
+/* Flag size */
+.lang-btn .fi {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
 }
 
 /* ===============================
