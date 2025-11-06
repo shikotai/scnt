@@ -29,7 +29,7 @@ export const translations = {
         phoneLabel: "Номер:",
         phoneValue: "+7 (705) 522-10-54",
         emailLabel: "Email:",
-        emailValue: "info@example.kz",
+        emailValue: "scnt.kz@gmail.com",
       },
     },
     homeHero: {
@@ -263,7 +263,7 @@ export const translations = {
       phoneLabel: "Phone:",
       phoneValue: "+7 (705) 522-10-54",
       emailLabel: "Email:",
-      emailValue: "info@example.kz",
+      emailValue: "scnt.kz@gmail.com",
     },
   },
   homeHero: {
@@ -497,7 +497,7 @@ export const translations = {
       phoneLabel: "Телефон:",
       phoneValue: "+7 (705) 522-10-54",
       emailLabel: "Email:",
-      emailValue: "info@example.kz",
+      emailValue: "scnt.kz@gmail.com",
     },
   },
   homeHero: {
@@ -522,7 +522,7 @@ export const translations = {
     project1: {
       alt: "Зерттеу жобасы",
       description:
-        "Био және тау-металлургиялық қалдықтарды өңдеу технологияларын әзірлеу мен масштабтау – энергия сақтау жүйелеріне арналған жоғары тиімді көміртек-кремний материалдарын алу мақсатында.",
+        "Энергияны сақтау жүйелерінде жоғары тиімді көміртекті - кремнийлі материалдарды жасау үшін био-және тау-кен металлургия өнеркәсібінің қалдықтарды қайта өңдеу технологияларын әзірлеу және масштабтау",
     },
   },
   about: {
