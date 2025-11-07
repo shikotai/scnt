@@ -3,7 +3,7 @@ import NavigationHeader from "../../components/NavigationHeader/NavigationHeader
 import Footer from "../../components/Footer/Footer";
 import "./News.css";
 import { Link } from "react-router-dom";
-import { useLang } from "../../lang/LanguageContext";
+import { useLang } from "../../lang/context/LanguageContext";
 
 const News: React.FC = () => {
   const { t } = useLang();

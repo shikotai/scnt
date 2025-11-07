@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./ProjectsSection.css";
-import { useLang } from "../../lang/LanguageContext"; // ⬅️ add this import
+import { useLang } from "../../lang/context/LanguageContext"; // ⬅️ add this import
 
 const ProjectsSection: React.FC = () => {
   const { t } = useLang(); // ⬅️ access translations

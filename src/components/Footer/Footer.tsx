@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import logo from "../../assets/logo-footer.png";
-import { useLang } from "../../lang/LanguageContext"; // ⬅️ import the hook
+import { useLang } from "../../lang/context/LanguageContext"; // ⬅️ import the hook
 
 const Footer: React.FC = () => {
   const { t } = useLang(); // ⬅️ access translator

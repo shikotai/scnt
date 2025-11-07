@@ -2,28 +2,34 @@ import React from "react";
 import NavigationHeader from "../../../components/NavigationHeader/NavigationHeader";
 import Footer from "../../../components/Footer/Footer";
 import "./japan-news.css";
-import { useLang } from "../../../lang/LanguageContext";
+import { useLang } from "../../../lang/context/LanguageContext";
 
 const JapanNews: React.FC = () => {
   const { t } = useLang();
 
-  // helpers for cleaner code
-  const collabItems = (t(
-  "japanNews.sections.results.list.collaboration.items"
-  ) as unknown as any[]) ?? [];
+  // ✅ Get raw arrays from translations (2nd arg = false)
+  const collabItemsRaw = t(
+    "japanNews.sections.results.list.collaboration.items",
+    false
+  );
+  const techItemsRaw = t(
+    "japanNews.sections.results.list.technicalInfo.items",
+    false
+  );
+  const intlItemsRaw = t(
+    "japanNews.sections.results.list.international.items",
+    false
+  );
+  const expoItemsRaw = t(
+    "japanNews.sections.results.list.exhibition.items",
+    false
+  );
 
-  const techItems = (t(
-  "japanNews.sections.results.list.technicalInfo.items"
-  ) as unknown as any[]) ?? [];
-
-  const intlItems = (t(
-  "japanNews.sections.results.list.international.items"
-  ) as unknown as any[]) ?? [];
-
-  const expoItems = (t(
-  "japanNews.sections.results.list.exhibition.items"
-  ) as unknown as any[]) ?? [];
-
+  // ✅ Runtime safety: ensure they're arrays before .map
+  const collabItems = Array.isArray(collabItemsRaw) ? collabItemsRaw : [];
+  const techItems = Array.isArray(techItemsRaw) ? techItemsRaw : [];
+  const intlItems = Array.isArray(intlItemsRaw) ? intlItemsRaw : [];
+  const expoItems = Array.isArray(expoItemsRaw) ? expoItemsRaw : [];
 
   return (
     <div className="news-page">
@@ -42,29 +48,33 @@ const JapanNews: React.FC = () => {
             style={{
               backgroundImage: `url('/images/news/japan-news/uni.png')`,
             }}
-          ></div>
+          />
           <div className="news-content">
             <h3>{t("japanNews.sections.sophiaUniversity.title")}</h3>
             <p>{t("japanNews.sections.sophiaUniversity.paragraph1")}</p>
             <p>{t("japanNews.sections.sophiaUniversity.paragraph2.intro")}</p>
-              <ul>
-                <li>
-                  {t(
-                    "japanNews.sections.sophiaUniversity.paragraph2.list.reputation"
-                  )}
-                </li>
-                <li>
-                  {t(
-                    "japanNews.sections.sophiaUniversity.paragraph2.list.programs"
-                  )}
-                </li>
-                <li>
-                  {t(
-                    "japanNews.sections.sophiaUniversity.paragraph2.list.campuses"
-                  )}
-                </li>
-              </ul>
-            <p>{t("japanNews.sections.sophiaUniversity.paragraph2.closing")}</p>
+            <ul>
+              <li>
+                {t(
+                  "japanNews.sections.sophiaUniversity.paragraph2.list.reputation"
+                )}
+              </li>
+              <li>
+                {t(
+                  "japanNews.sections.sophiaUniversity.paragraph2.list.programs"
+                )}
+              </li>
+              <li>
+                {t(
+                  "japanNews.sections.sophiaUniversity.paragraph2.list.campuses"
+                )}
+              </li>
+            </ul>
+            <p>
+              {t(
+                "japanNews.sections.sophiaUniversity.paragraph2.closing"
+              )}
+            </p>
           </div>
         </div>
       </section>
@@ -83,7 +93,7 @@ const JapanNews: React.FC = () => {
             style={{
               backgroundImage: `url('/images/news/japan-news/meeting.jpg')`,
             }}
-          ></div>
+          />
         </div>
       </section>
 
@@ -97,13 +107,13 @@ const JapanNews: React.FC = () => {
               style={{
                 backgroundImage: `url('/images/news/japan-news/discussion.jpg')`,
               }}
-            ></div>
+            />
             <div
               className="news-image4"
               style={{
                 backgroundImage: `url('/images/news/japan-news/comnext.png')`,
               }}
-            ></div>
+            />
           </div>
           <div className="news-content">
             <p>{t("japanNews.sections.meetingSakaida.paragraphs.p1")}</p>
@@ -141,10 +151,12 @@ const JapanNews: React.FC = () => {
               {/* Collaboration */}
               <li>
                 <strong>
-                  {t("japanNews.sections.results.list.collaboration.title")}
+                  {t(
+                    "japanNews.sections.results.list.collaboration.title"
+                  )}
                 </strong>
                 <ul>
-                  {collabItems?.map((item, i) => (
+                  {collabItems.map((item, i) => (
                     <li key={`collab-${i}`}>{item}</li>
                   ))}
                 </ul>
@@ -153,10 +165,12 @@ const JapanNews: React.FC = () => {
               {/* Technical Info */}
               <li>
                 <strong>
-                  {t("japanNews.sections.results.list.technicalInfo.title")}
+                  {t(
+                    "japanNews.sections.results.list.technicalInfo.title"
+                  )}
                 </strong>
                 <ul>
-                  {techItems?.map((item, i) => (
+                  {techItems.map((item, i) => (
                     <li key={`tech-${i}`}>{item}</li>
                   ))}
                 </ul>
@@ -165,10 +179,12 @@ const JapanNews: React.FC = () => {
               {/* International */}
               <li>
                 <strong>
-                  {t("japanNews.sections.results.list.international.title")}
+                  {t(
+                    "japanNews.sections.results.list.international.title"
+                  )}
                 </strong>
                 <ul>
-                  {intlItems?.map((item, i) => (
+                  {intlItems.map((item, i) => (
                     <li key={`intl-${i}`}>{item}</li>
                   ))}
                 </ul>
@@ -177,10 +193,12 @@ const JapanNews: React.FC = () => {
               {/* Exhibition */}
               <li>
                 <strong>
-                  {t("japanNews.sections.results.list.exhibition.title")}
+                  {t(
+                    "japanNews.sections.results.list.exhibition.title"
+                  )}
                 </strong>
                 <ul>
-                  {expoItems?.map((item, i) => (
+                  {expoItems.map((item, i) => (
                     <li key={`expo-${i}`}>{item}</li>
                   ))}
                 </ul>

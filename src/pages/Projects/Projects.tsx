@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import NavigationHeader from "../../components/NavigationHeader/NavigationHeader";
 import Footer from "../../components/Footer/Footer";
 import "./Projects.css";
-import { useLang } from "../../lang/LanguageContext"; // ⬅️ import translator
+import { useLang } from "../../lang/context/LanguageContext"; // ⬅️ import translator
 
 const ProjectsList: React.FC = () => {
   const { t } = useLang();

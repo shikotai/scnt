@@ -3,7 +3,7 @@ import NavigationHeader from "../../../components/NavigationHeader/NavigationHea
 import Footer from "../../../components/Footer/Footer";
 import "./br28713383.css";
 import { Link } from "react-router-dom";
-import { useLang } from "../../../lang/LanguageContext";
+import { useLang } from "../../../lang/context/LanguageContext";
 
 const Br28713383: React.FC = () => {
   const { t } = useLang();

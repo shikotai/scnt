@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
 import "./NewsCarousel.css";
-import { useLang } from "../../lang/LanguageContext"; // ⬅️ import the hook
+import { useLang } from "../../lang/context/LanguageContext"; // ⬅️ import the hook
 
 const NewsCarousel: React.FC = () => {
   const { t } = useLang(); // ⬅️ access translator

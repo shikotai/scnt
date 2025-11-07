@@ -2,7 +2,7 @@ import React from "react";
 import NavigationHeader from "../../components/NavigationHeader/NavigationHeader";
 import Footer from "../../components/Footer/Footer";
 import "./About.css";
-import { useLang } from "../../lang/LanguageContext"; // ⬅️ import translation hook
+import { useLang } from "../../lang/context/LanguageContext"; // ⬅️ import translation hook
 
 const About: React.FC = () => {
   const { t } = useLang(); // ⬅️ get translator

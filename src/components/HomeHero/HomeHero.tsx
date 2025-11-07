@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./HomeHero.css";
 import sdsImage from "../../assets/sds.jpg";
-import { useLang } from "../../lang/LanguageContext"; // ⬅️ import the language context
+import { useLang } from "../../lang/context/LanguageContext"; // ⬅️ import the language context
 
 const HomeHero: React.FC = () => {
   const { t } = useLang(); // ⬅️ access the translator
