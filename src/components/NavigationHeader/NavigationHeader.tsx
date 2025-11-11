@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavigationHeader.css";
 import logo from "../../assets/logo.png";
-
-// ✅ Import LanguageContext hook
 import { useLang } from "../../lang/context/LanguageContext";
 
 const NavigationHeader: React.FC = () => {
@@ -18,8 +16,8 @@ const NavigationHeader: React.FC = () => {
   return (
     <header className="navigation-header">
       <div className="header-container">
-        {/* ✅ Logo */}
-        <div className="logo-section">
+        {/* ✅ Logo (now links to home) */}
+        <NavLink to="/" className="logo-section" onClick={() => setMenuOpen(false)}>
           <img src={logo} alt="Scientific Center Logo" className="logo" />
           <div className="logo-text">
             <span className="title">Scientific</span>
@@ -27,24 +25,21 @@ const NavigationHeader: React.FC = () => {
             <span className="title">New</span>
             <span className="title">Technologies</span>
           </div>
-        </div>
+        </NavLink>
 
         {/* ✅ Hamburger Menu Button */}
         <button
           className={`menu-toggle ${menuOpen ? "open" : ""}`}
           onClick={() => setMenuOpen((prev) => !prev)}
-          aria-label={t("aria.toggleNavigation") as string} // ✅ fixed type error
+          aria-label={t("aria.toggleNavigation") as string}
         >
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        {/* ✅ Navigation Menu */}
+        {/* ✅ Navigation Links */}
         <nav className={`nav-menu ${menuOpen ? "show" : ""}`}>
-          <NavLink to="/" onClick={() => setMenuOpen(false)}>
-            {t("nav.home") as string}
-          </NavLink>
           <NavLink to="/about" onClick={() => setMenuOpen(false)}>
             {t("nav.about") as string}
           </NavLink>
@@ -53,6 +48,10 @@ const NavigationHeader: React.FC = () => {
           </NavLink>
           <NavLink to="/projects" onClick={() => setMenuOpen(false)}>
             {t("nav.projects") as string}
+          </NavLink>
+          {/* ✅ New "Members" button */}
+          <NavLink to="/members" onClick={() => setMenuOpen(false)}>
+            {t("nav.members") as string}
           </NavLink>
 
           {/* ✅ Language Switcher */}

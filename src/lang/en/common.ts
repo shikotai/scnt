@@ -1,9 +1,9 @@
 export default {
   nav: {
-    home: "Home",
     about: "About Us",
     news: "News",
     projects: "Projects",
+    members: "Employees"
   },
   lang: {
     ru: "Rus",

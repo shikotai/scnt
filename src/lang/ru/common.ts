@@ -1,9 +1,9 @@
 export default {
   nav: {
-    home: "Главная",
     about: "О нас",
     news: "Новости",
     projects: "Проекты",
+    members: "Сотрудники"
   },
   lang: {
     ru: "Рус",

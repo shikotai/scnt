@@ -8,8 +8,8 @@
   box-sizing: border-box;
   width: 100%;
   z-index: 999;
-  position: relative; /* ✅ ensure dropdown anchors here */
-  overflow: visible;  /* ✅ prevent clipping */
+  position: relative;
+  overflow: visible;
 }
 
 /* --- Container --- */
@@ -29,6 +29,15 @@
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
+  text-decoration: none; /* ✅ removes underline */
+  color: inherit;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.logo-section:hover {
+  transform: translateY(-2px); /* ✅ slight hover lift */
+  opacity: 0.9;
+  text-decoration: none; /* ✅ prevent underline on hover */
 }
 
 .logo {
@@ -65,10 +74,18 @@
   font-size: 16px;
   line-height: 1.2;
   max-width: 180px;
+  user-select: none;
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .logo-text .title {
   font-weight: 600;
+  color: #000;
+  transition: color 0.25s ease;
+}
+
+.logo-section:hover .logo-text .title {
+  color: #1e5acb; /* ✅ animated hover color */
 }
 
 .logo-text span:not(.title) {
@@ -89,11 +106,12 @@
   font-size: 17px;
   font-weight: 400;
   letter-spacing: 0.3px;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .nav-menu a:hover {
   color: #1e5acb;
+  transform: translateY(-2px);
 }
 
 .nav-menu .lang {
@@ -108,7 +126,7 @@
 }
 
 .lang-btn {
-  background: #f1f7ff;;
+  background: #f1f7ff;
   border: 1px solid #1e5acb;
   border-radius: 6px;
   padding: 4px 8px;
@@ -206,7 +224,7 @@
   .menu-toggle {
     display: flex;
     order: 2;
-    z-index: 1001; /* keep it above dropdown */
+    z-index: 1001;
     padding: 0px;
   }
 

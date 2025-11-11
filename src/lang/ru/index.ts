@@ -6,6 +6,8 @@ import news from "./news";
 import japanNews from "./news/japan-news";
 import projects from "./projects";
 import br28713383 from "./projects/br28713383";
+import members from "./members";
+import ualis from "./members/ualis";
 
 export default {
   ...common,
@@ -16,4 +18,6 @@ export default {
   ...japanNews,
   ...projects,
   ...br28713383,
+  ...members, // works fine now
+  ...ualis,
 };

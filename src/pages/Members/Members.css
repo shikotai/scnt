@@ -1,0 +1,134 @@
+.members-page {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   MEMBERS SECTION
+   =============================== */
+.members-section {
+  background-color: #f1f7ff;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.members-section h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #0b1533;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===============================
+   GRID LAYOUT
+   =============================== */
+.members-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.members-card {
+  width: 220px;
+  text-align: center;
+}
+
+.members-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 15px;
+  border: 3px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.members-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0b1533;
+  margin-bottom: 5px;
+}
+
+.members-position {
+  font-size: 16px;
+  color: #333;
+}
+
+/* ===============================
+   RESPONSIVE ONLY
+   =============================== */
+
+/* Tablets (≤992px) */
+@media (max-width: 992px) {
+  .members-section h2 {
+    font-size: 24px;
+  }
+
+  .members-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .members-name {
+    font-size: 16px;
+  }
+
+  .members-position {
+    font-size: 15px;
+  }
+}
+
+/* Phones (≤768px) */
+@media (max-width: 768px) {
+  .members-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .members-card {
+    width: 100%;
+  }
+
+  .members-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .members-section h2 {
+    font-size: 22px;
+  }
+}
+
+/* Small phones (≤480px) */
+@media (max-width: 480px) {
+  .members-section {
+    padding: 40px 10px;
+  }
+
+  .members-section h2 {
+    font-size: 20px;
+  }
+
+  .members-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .members-name {
+    font-size: 15px;
+  }
+
+  .members-position {
+    font-size: 14px;
+  }
+}
