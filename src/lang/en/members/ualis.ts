@@ -15,5 +15,7 @@ export default {
     bioTitle: "Professional Biography",
     bioText:
       "Imagine this section filled with achievements, experience, and research contributions.",
+    projectslist:"Разработка транспортных систем.",
+    publicationslist:"I'll write one later."
   },
 };

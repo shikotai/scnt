@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavigationHeader from "../../../components/NavigationHeader/NavigationHeader";
 import Footer from "../../../components/Footer/Footer";
 import { useLang } from "../../../lang/context/LanguageContext";
@@ -6,6 +6,7 @@ import "./uali-shynybek.css";
 
 const UaliShynybek: React.FC = () => {
   const { t } = useLang();
+  const [activeTab, setActiveTab] = useState<"bio" | "projects" | "publications">("bio");
 
   return (
     <div className="member-profile-page">
@@ -31,8 +32,7 @@ const UaliShynybek: React.FC = () => {
               </a>
             </p>
             <p className="profile-index">
-              H-index:{" "}
-              <span className="highlight">{t("ualis.hindex")}</span>
+              H-index: <span className="highlight">{t("ualis.hindex")}</span>
             </p>
 
             <div className="profile-links">
@@ -52,15 +52,52 @@ const UaliShynybek: React.FC = () => {
           </div>
         </div>
 
+        {/* Tabs */}
         <div className="profile-tabs">
-          <button className="active">{t("ualis.tabs.bio")}</button>
-          <button>{t("ualis.tabs.projects")}</button>
-          <button>{t("ualis.tabs.publications")}</button>
+          <button
+            className={activeTab === "bio" ? "active" : ""}
+            onClick={() => setActiveTab("bio")}
+          >
+            {t("ualis.tabs.bio")}
+          </button>
+          <button
+            className={activeTab === "projects" ? "active" : ""}
+            onClick={() => setActiveTab("projects")}
+          >
+            {t("ualis.tabs.projects")}
+          </button>
+          <button
+            className={activeTab === "publications" ? "active" : ""}
+            onClick={() => setActiveTab("publications")}
+          >
+            {t("ualis.tabs.publications")}
+          </button>
         </div>
 
+        {/* Tab Content */}
         <div className="profile-content">
-          <h3>{t("ualis.bioTitle")}</h3>
-          <p>{t("ualis.bioText")}</p>
+          {activeTab === "bio" && (
+            <>
+              <h3>{t("ualis.bioTitle")}</h3>
+              <p>{t("ualis.bioText")}</p>
+            </>
+          )}
+
+          {activeTab === "projects" && (
+            <>
+              <h3>{t("ualis.tabs.projects")}</h3>
+              <p>
+                {t("ualis.projectslist")}
+              </p>
+            </>
+          )}
+
+          {activeTab === "publications" && (
+            <>
+              <h3>{t("ualis.tabs.publications")}</h3>
+              <p>{t("ualis.publicationslist")}</p>
+            </>
+          )}
         </div>
       </section>
 

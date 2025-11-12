@@ -92,7 +92,6 @@
   text-decoration: underline;
 }
 
-
 /* ===============================
    BACK BUTTON
    =============================== */
@@ -137,7 +136,95 @@
 }
 
 /* ===============================
-   RESPONSIVE ONLY (PC stays same)
+   PROJECT LEADER SECTION
+   =============================== */
+.leader-section {
+  background-color: #ffffff;
+}
+
+.leader-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 900px;
+  flex-wrap: wrap;
+}
+
+.leader-photo {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.leader-info {
+  text-align: left;
+  max-width: 500px;
+}
+
+.leader-name {
+  font-size: 22px;
+  color: #0b1533;
+  margin-bottom: 8px;
+}
+
+.leader-position {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.leader-email {
+  font-size: 16px;
+  color: #1e5acb;
+}
+
+/* ===============================
+   EMPLOYEES GRID
+   =============================== */
+.employees-section {
+  background-color: #f1f7ff;
+}
+
+.employees-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.employee-card {
+  text-align: center;
+  width: 160px;
+}
+
+.employee-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.employee-name {
+  font-size: 16px;
+  color: #0b1533;
+  margin: 5px 0;
+}
+
+.employee-position {
+  font-size: 14px;
+  color: #333;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
    =============================== */
 
 /* Tablets (≤992px) */
@@ -156,6 +243,11 @@
 
   .about-image {
     height: 260px;
+  }
+
+  .leader-photo {
+    width: 160px;
+    height: 160px;
   }
 }
 
@@ -191,6 +283,28 @@
     font-size: 14px;
     padding: 8px 18px;
   }
+
+  .leader-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leader-info {
+    text-align: center;
+  }
+
+  .employees-grid {
+    gap: 25px;
+  }
+
+  .employee-card {
+    width: 120px;
+  }
+
+  .employee-photo {
+    width: 110px;
+    height: 110px;
+  }
 }
 
 /* Small phones (≤480px) */
@@ -210,5 +324,15 @@
   .about-content p {
     font-size: 14px;
     line-height: 1.5;
+  }
+
+  .leader-photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .employee-photo {
+    width: 100px;
+    height: 100px;
   }
 }

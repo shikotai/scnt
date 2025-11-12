@@ -15,5 +15,7 @@ export default {
     bioTitle: "Профессиональная биография",
     bioText:
       "работяга.пнг",
+    projectslist:"Разработка транспортных систем.",
+    publicationslist:"I'll write one later."
   },
 };

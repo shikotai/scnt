@@ -15,5 +15,7 @@ export default {
     bioTitle: "Кәсіби өмірбаян",
     bioText:
       "жеский работникпымғо",
+    projectslist:"Разработка транспортных систем.",
+    publicationslist:"I'll write one later."
   },
 };
