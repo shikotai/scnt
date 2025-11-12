@@ -1,11 +1,19 @@
-const ualis = {
-  name: "Уали Шыныбек",
-  position: "Программист",
-  description: "Специалист по веб-разработке и внедрению ИТ-решений.",
-  achievements: [
-    "Разработал сайт для SCNT",
-    "Настроил многоязычную систему и адаптивный дизайн",
-  ],
+export default {
+  ualis: {
+    name: "Шыныбек Уали",
+    position: "Разработчик",
+    degree: "Студент",
+    role: "Программист",
+    affiliation: "Scientific Center for New Technologies",
+    email: "ualishynybek@gmail.com",
+    hindex: "будет однажды",
+    tabs: {
+      bio: "Биография",
+      projects: "Научные проекты",
+      publications: "Публикации",
+    },
+    bioTitle: "Профессиональная биография",
+    bioText:
+      "работяга.пнг",
+  },
 };
-
-export default ualis;

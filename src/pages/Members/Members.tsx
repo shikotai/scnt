@@ -9,8 +9,8 @@ const Members: React.FC = () => {
   const { t } = useLang();
 
   const member = {
-    name: t("members.items.ualis.name"),
-    position: t("members.items.ualis.position"),
+    name: t("ualis.name"),
+    position: t("ualis.position"),
     image: "/images/members/ualis.png",
     link: "/members/uali-shynybek", // ✅ new link
   };

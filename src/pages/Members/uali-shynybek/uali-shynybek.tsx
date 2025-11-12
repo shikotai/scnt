@@ -19,21 +19,22 @@ const UaliShynybek: React.FC = () => {
           ></div>
 
           <div className="profile-info">
-            <h2 className="profile-name">{t("members.items.ualis.name")}</h2>
-            <p className="profile-position">{t("members.items.ualis.position")}</p>
-            <p className="profile-degree">Студент</p>
-            <p className="profile-role">Программист</p>
-            <p className="profile-affiliation">
-              Scientific Center for New Technologies
-            </p>
+            <h2 className="profile-name">{t("ualis.name")}</h2>
+            <p className="profile-position">{t("ualis.position")}</p>
+            <p className="profile-degree">{t("ualis.degree")}</p>
+            <p className="profile-role">{t("ualis.role")}</p>
+            <p className="profile-affiliation">{t("ualis.affiliation")}</p>
             <p className="profile-email">
               Email:{" "}
-              <a href="mailto:ualishynybek@scnt.kz">ualishynybek@gmail.com</a>
+              <a href={`mailto:${t("ualis.email")}`}>
+                {t("members.ualis.email")}
+              </a>
             </p>
             <p className="profile-index">
-              H-index: <span className="highlight">one day i'll have one</span>
+              H-index:{" "}
+              <span className="highlight">{t("ualis.hindex")}</span>
             </p>
-            
+
             <div className="profile-links">
               <a href="#" target="_blank" rel="noreferrer">
                 <img src="/images/icons/scopus.png" alt="Scopus" />
@@ -52,16 +53,14 @@ const UaliShynybek: React.FC = () => {
         </div>
 
         <div className="profile-tabs">
-          <button className="active">Биография</button>
-          <button className="active">Научные проекты</button>
-          <button className="active">Публикации</button>
+          <button className="active">{t("ualis.tabs.bio")}</button>
+          <button>{t("ualis.tabs.projects")}</button>
+          <button>{t("ualis.tabs.publications")}</button>
         </div>
 
         <div className="profile-content">
-          <h3>Профессиональная биография</h3>
-          <p>
-            Представьте типо дофига наработал
-          </p>
+          <h3>{t("ualis.bioTitle")}</h3>
+          <p>{t("ualis.bioText")}</p>
         </div>
       </section>
 
