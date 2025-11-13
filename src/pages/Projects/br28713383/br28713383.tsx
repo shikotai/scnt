@@ -8,17 +8,16 @@ import { useLang } from "../../../lang/context/LanguageContext";
 const Br28713383: React.FC = () => {
   const { t } = useLang();
 
-  // Fetch employee translations dynamically
   const employees = [
     {
-      name: t("project_br28713383.sections.employees.list.uali.name"),
-      position: t("project_br28713383.sections.employees.list.uali.position"),
-      image: t("project_br28713383.sections.employees.list.uali.image"),
+      name: t("ualis.name"),
+      position: t("ualis.position"),
+      image: t("ualis.image"),
     },
     {
-      name: t("project_br28713383.sections.employees.list.dana.name"),
-      position: t("project_br28713383.sections.employees.list.dana.position"),
-      image: t("project_br28713383.sections.employees.list.dana.image"),
+      name: t("placeholder"),
+      position: t("placeholder"),
+      image: t("placeholder"),
     },
   ];
 

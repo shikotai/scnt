@@ -7,6 +7,7 @@ export default {
     affiliation: "Scientific Center for New Technologies",
     email: "ualishynybek@gmail.com",
     hindex: "будет однажды",
+    image: "/images/members/ualis.png",
     tabs: {
       bio: "Биография",
       projects: "Научные проекты",
@@ -16,6 +17,6 @@ export default {
     bioText:
       "работяга.пнг",
     projectslist:"Разработка транспортных систем.",
-    publicationslist:"I'll write one later."
+    publicationslist:"I'll write one"
   },
 };

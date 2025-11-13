@@ -3,6 +3,7 @@ import NavigationHeader from "../../components/NavigationHeader/NavigationHeader
 import Footer from "../../components/Footer/Footer";
 import "./About.css";
 import { useLang } from "../../lang/context/LanguageContext"; // ⬅️ import translation hook
+import { Link } from "react-router-dom";
 
 const About: React.FC = () => {
   const { t } = useLang(); // ⬅️ get translator
@@ -56,15 +57,21 @@ const About: React.FC = () => {
               <li>{t("about.sections.team.list.masters")}</li>
               <li>{t("about.sections.team.list.specialists")}</li>
             </ul>
+
+            {/* ➕ ADD THIS BUTTON */}
+            <Link to="/members" className="about-members-btn">
+              {t("about.sections.team.button")}
+            </Link>
           </div>
-          <div
-            className="about-image"
-            style={{
-              backgroundImage: `url('/images/about/team.jpg')`,
-            }}
-          ></div>
-        </div>
-      </section>
+
+    <div
+      className="about-image"
+      style={{
+        backgroundImage: `url('/images/about/team.jpg')`,
+      }}
+    ></div>
+  </div>
+</section>
 
       {/* Партнёры */}
       <section className="about-section partners-section">

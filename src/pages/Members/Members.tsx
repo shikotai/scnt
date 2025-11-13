@@ -8,12 +8,20 @@ import { useLang } from "../../lang/context/LanguageContext";
 const Members: React.FC = () => {
   const { t } = useLang();
 
-  const member = {
-    name: t("ualis.name"),
-    position: t("ualis.position"),
-    image: "/images/members/ualis.png",
-    link: "/members/uali-shynybek", // ✅ new link
-  };
+  const members = [
+    {
+      name: t("ualis.name"),
+      position: t("ualis.position"),
+      image: "/images/members/ualis.png",
+      link: "/members/uali-shynybek",
+    },
+    {
+      name: t("placeholder"),
+      position: t("placholder"),
+      image: "/images/members/placeholder1.jpg",
+      link: "/members/placeholder",
+    },
+  ];
 
   return (
     <div className="members-page">
@@ -23,15 +31,16 @@ const Members: React.FC = () => {
         <h2>{t("members.title")}</h2>
 
         <div className="members-grid">
-          {/* Wrap the whole card in Link */}
-          <Link to={member.link} className="members-card">
-            <div
-              className="members-photo"
-              style={{ backgroundImage: `url(${member.image})` }}
-            ></div>
-            <h3 className="members-name">{member.name}</h3>
-            <p className="members-position">{member.position}</p>
-          </Link>
+          {members.map((person, index) => (
+            <Link to={person.link} className="members-card" key={index}>
+              <div
+                className="members-photo"
+                style={{ backgroundImage: `url(${person.image})` }}
+              ></div>
+              <h3 className="members-name">{person.name}</h3>
+              <p className="members-position">{person.position}</p>
+            </Link>
+          ))}
         </div>
       </section>
 
