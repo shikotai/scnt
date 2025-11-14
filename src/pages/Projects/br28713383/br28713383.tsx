@@ -12,12 +12,14 @@ const Br28713383: React.FC = () => {
     {
       name: t("ualis.name"),
       position: t("ualis.position"),
-      image: t("ualis.image"),
+      image: "/images/members/ualis.png",
+      link: "/members/uali-shynybek",
     },
     {
       name: t("placeholder"),
       position: t("placeholder"),
-      image: t("placeholder"),
+      image: "/images/members/placeholder.jpg",
+      link: null,
     },
   ];
 
@@ -67,13 +69,21 @@ const Br28713383: React.FC = () => {
           <div
             className="leader-photo"
             style={{
-              backgroundImage: `url(${t("project_br28713383.sections.leader.image")})`,
+              backgroundImage: `url(${t(
+                "project_br28713383.sections.leader.image"
+              )})`,
             }}
           ></div>
           <div className="leader-info">
-            <h3 className="leader-name">{t("project_br28713383.sections.leader.name")}</h3>
-            <p className="leader-position">{t("project_br28713383.sections.leader.position")}</p>
-            <p className="leader-email">{t("project_br28713383.sections.leader.email")}</p>
+            <h3 className="leader-name">
+              {t("project_br28713383.sections.leader.name")}
+            </h3>
+            <p className="leader-position">
+              {t("project_br28713383.sections.leader.position")}
+            </p>
+            <p className="leader-email">
+              {t("project_br28713383.sections.leader.email")}
+            </p>
           </div>
         </div>
       </section>
@@ -82,16 +92,29 @@ const Br28713383: React.FC = () => {
       <section className="about-section employees-section">
         <h2>{t("project_br28713383.sections.employees.title")}</h2>
         <div className="employees-grid">
-          {employees.map((emp, index) => (
-            <div key={index} className="employee-card">
-              <div
-                className="employee-photo"
-                style={{ backgroundImage: `url(${emp.image})` }}
-              ></div>
-              <h3 className="employee-name">{emp.name}</h3>
-              <p className="employee-position">{emp.position}</p>
-            </div>
-          ))}
+          {employees.map((emp, index) =>
+            emp.link ? (
+              // CLICKABLE card
+              <Link key={index} to={emp.link} className="employee-card">
+                <div
+                  className="employee-photo"
+                  style={{ backgroundImage: `url(${emp.image})` }}
+                ></div>
+                <h3 className="employee-name">{emp.name}</h3>
+                <p className="employee-position">{emp.position}</p>
+              </Link>
+            ) : (
+              // NON-CLICKABLE card
+              <div key={index} className="employee-card employee-card-disabled">
+                <div
+                  className="employee-photo"
+                  style={{ backgroundImage: `url(${emp.image})` }}
+                ></div>
+                <h3 className="employee-name">{emp.name}</h3>
+                <p className="employee-position">{emp.position}</p>
+              </div>
+            )
+          )}
         </div>
       </section>
 

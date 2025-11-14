@@ -198,8 +198,22 @@
 }
 
 .employee-card {
-  text-align: center;
-  width: 160px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  border-radius: 12px; /* makes lift look better */
+}
+
+.employee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.employee-card-disabled {
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
 }
 
 .employee-photo {
@@ -222,6 +236,12 @@
   font-size: 14px;
   color: #333;
 }
+
+.employee-card-disabled {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: default;
+} 
 
 /* ===============================
    RESPONSIVE DESIGN
